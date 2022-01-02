@@ -1,0 +1,4 @@
+<h1 *ngIf="isHighestLevelHeading else secondLevelHeading" class="heading__h1">{{label}}</h1>
+<ng-template #secondLevelHeading>
+    <h2 class="heading__h2">{{label}}</h2>
+</ng-template>
