@@ -1,3 +1,13 @@
+@import 'variables';
+
 .app {
-    margin: 0 1rem;
+    margin: 0;
+    padding: 0 1.5rem;
+    background-color: $light-background;
+}
+
+@media screen and (min-width: $tablet) {
+    .app {
+        padding: 0 2rem;
+    }
 }

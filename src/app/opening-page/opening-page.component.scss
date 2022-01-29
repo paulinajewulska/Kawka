@@ -1,0 +1,24 @@
+@import 'variables';
+
+.opening-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+
+    &__title,  &__paragraph, &__button { 
+        margin: 1rem 0;
+    }
+
+    &__button {
+        margin-bottom: 5rem;  // to lift component up 🎈
+    }
+}
+
+@media screen and (min-width: $tablet) {
+    .opening-page {
+        &__title,  &__paragraph { 
+            width: 50%;
+        }
+    }
+}
