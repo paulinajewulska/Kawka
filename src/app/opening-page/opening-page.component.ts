@@ -11,5 +11,5 @@ import BUTTONS from '../../labels/buttons.json';
 export class OpeningPageComponent {
   title = TITLES.TimeForTastyCoffeee;
   paragraph = PARAGRAPHS.Lorem;
-  buttonLabel = BUTTONS.letsStart;
+  buttonLabel = BUTTONS.Zaczynajmy;
 }

@@ -1,0 +1,35 @@
+@import 'variables';
+
+.registration {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;  
+
+    &__button {
+        display: block;
+        margin-top: 2rem;
+    }
+
+    &__link-wrapper {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (min-width: $tablet) {
+    .registration {
+        &__form { 
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (min-width: $laptop) {
+    .registration {
+        &__form { 
+            width: 25%;
+        }
+    }
+}

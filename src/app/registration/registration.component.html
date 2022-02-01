@@ -1,1 +1,15 @@
-<p>registration works!</p>
+<div class="registration">
+    <h1 class="registration__title">{{title}}</h1>
+    <p class="registration__paragraph">{{paragraph}}</p>
+    <form class="registration__form">
+        <!--  TODO: fix -->
+        <app-input label="Imię"></app-input>
+        <app-input label="Email" type="'email'"></app-input>
+        <app-input label="Hasło" type="'password'"></app-input>
+        <app-button class="registration__button" [label]="buttonLabel"></app-button>
+    </form>
+    <div class="registration__link-wrapper">
+        <p class="registration__paragraph">{{linkParagraph}}</p>
+        <app-link [label]="loginLink"></app-link>
+    </div>
+</div>

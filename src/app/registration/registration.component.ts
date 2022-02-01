@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import TITLES from '../../labels/titles.json';
+import PARAGRAPHS from '../../labels/paragraphs.json';
+import BUTTONS from '../../labels/buttons.json';
 
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.scss']
 })
-export class RegistrationComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class RegistrationComponent {
+  title = TITLES.HiNiceToMeetYou;
+  paragraph = PARAGRAPHS.PodajPonizszeInformacje;
+  linkParagraph = PARAGRAPHS.PosiadaszJuzKonto;
+  buttonLabel = BUTTONS.Zarejestruj;
+  loginLink = BUTTONS.Zaloguj;
 }
