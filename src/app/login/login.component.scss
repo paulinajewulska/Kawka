@@ -1,0 +1,38 @@
+@import 'variables';
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;  
+
+    &__button {
+        display: block;
+        margin-top: 2rem;
+    }
+
+    &__paragraph {
+        margin-top: 2rem;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: $tablet) {
+    .login {
+        &__form { 
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (min-width: $laptop) {
+    .login {
+        &__form { 
+            width: 25%;
+        }
+    }
+}

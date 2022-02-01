@@ -1,1 +1,11 @@
-<p>login works!</p>
+<div class="login">
+    <h1 class="login__title">{{title}}</h1>
+    <form class="login__form">
+        <!--  TODO: fix -->
+        <app-input label="Email" type="'email'"></app-input>
+        <app-input label="Hasło" type="'password'"></app-input>
+        <app-button class="registration__button" [label]="buttonLabel"></app-button>
+    </form>
+    <p class="login__paragraph">{{linkParagraph}} <app-link [label]="loginLink"></app-link>
+    </p>
+</div>

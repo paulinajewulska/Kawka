@@ -1,5 +1,6 @@
 {
     "Lorem": "Lorem Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat augue sed bibendum condimentum. Phasellus sagittis nisl libero, a consectetur massa mattis id.",
     "PodajPonizszeInformacje": "Podaj poniższe informacje, aby się zarejestrować",
-    "PosiadaszJuzKonto": "Posiadasz już konto?"
+    "PosiadaszJuzKonto": "Posiadasz już konto?",
+    "NiePosiadaszJeszczeKonta": "Nie posiadasz jeszcze konta?"
 }

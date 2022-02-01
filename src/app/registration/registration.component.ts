@@ -9,7 +9,7 @@ import BUTTONS from '../../labels/buttons.json';
   styleUrls: ['./registration.component.scss']
 })
 export class RegistrationComponent {
-  title = TITLES.HiNiceToMeetYou;
+  title = TITLES.CzescMiloCiePoznac;
   paragraph = PARAGRAPHS.PodajPonizszeInformacje;
   linkParagraph = PARAGRAPHS.PosiadaszJuzKonto;
   buttonLabel = BUTTONS.Zarejestruj;
