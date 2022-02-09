@@ -1,0 +1,14 @@
+@import 'variables';
+
+.menu {
+    display: flex;
+    border-bottom: 1px solid $black;
+
+    &__icon {
+        width: 32px;
+        padding: .75rem 1rem;
+        &:last-child {
+            margin-left: auto;
+        }
+    }
+}
