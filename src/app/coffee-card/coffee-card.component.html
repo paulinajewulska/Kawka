@@ -1,0 +1,12 @@
+<div class="coffee-card">
+    <div class="coffee-card__image-wrapper">
+        <img [src]="imgSrc" [alt]="imgLabel" class="coffee-card__image" />
+    </div>
+    <div class="coffee-card__info">
+        <p class="coffee-card__title">{{title}}</p>
+        <div class="coffee-card__chips">
+            <app-chip [label]="roaster" [type]="CHIP_TYPE.ROASTER" class="coffee-card__chip"></app-chip>
+            <app-chip [label]="origin" [type]="CHIP_TYPE.ORIGIN" class="coffee-card__chip"></app-chip>
+        </div>
+    </div>
+</div>

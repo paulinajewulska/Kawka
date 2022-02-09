@@ -5,13 +5,15 @@ import { ButtonComponent } from './components/base/button/button.component';
 import { InputComponent } from './components/form/input/input.component';
 import { LinkComponent } from './components/base/link/link.component';
 import { RouterModule } from '@angular/router';
+import { ChipComponent } from './components/base/chip/chip.component';
 
 @NgModule({
   declarations: [
     HeadingComponent,
     ButtonComponent,
     InputComponent,
-    LinkComponent
+    LinkComponent,
+    ChipComponent
   ],
   imports: [
     CommonModule,
@@ -21,7 +23,8 @@ import { RouterModule } from '@angular/router';
     HeadingComponent,
     ButtonComponent,
     InputComponent,
-    LinkComponent
+    LinkComponent,
+    ChipComponent
   ]
 })
 export class SharedModule { }

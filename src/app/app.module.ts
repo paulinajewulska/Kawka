@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { OpeningPageComponent } from './opening-page/opening-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CoffeeCardComponent } from './coffee-card/coffee-card.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     LoginComponent,
     RegistrationComponent,
     OpeningPageComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CoffeeCardComponent
   ],
   imports: [
     BrowserModule,
