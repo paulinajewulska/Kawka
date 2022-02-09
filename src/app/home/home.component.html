@@ -1,8 +1,18 @@
 <div class="home">
-    <h1 class="home__title">{{classicsLabel}}</h1>
-    <div class="home__classics">
-    </div>
-    <h1 class="home__">{{newLabel}}</h1>
-    <div class="home__new">
+    <app-menu></app-menu>
+    <div class="wrapper">
+        <app-nav></app-nav>
+        <div class="content-wrapper">
+            <div class="home__classics-wrapper">
+                <h1 class="home__title">{{classicsLabel}}</h1>
+                <div class="home__classics">
+                </div>
+            </div>
+            <div class="home__new-wrapper">
+                <h1 class="home__title">{{newLabel}}</h1>
+                <div class="home__new">
+                </div>
+            </div>
+        </div>
     </div>
 </div>
