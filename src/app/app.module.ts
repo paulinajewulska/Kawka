@@ -12,6 +12,7 @@ import { OpeningPageComponent } from './opening-page/opening-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CoffeeCardComponent } from './coffee-card/coffee-card.component';
 import { firebaseConfig } from './firebaseConfig';
+import { ReactiveFormsModule } from '@angular/forms';
 import { NavComponent } from './nav/nav.component';
 import { MenuComponent } from './menu/menu.component'; // includes firebaseConfig info
 
@@ -30,9 +31,10 @@ import { MenuComponent } from './menu/menu.component'; // includes firebaseConfi
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireAuthModule,
+    AngularFireModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

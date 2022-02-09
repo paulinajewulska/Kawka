@@ -1,11 +1,12 @@
 <div class="registration">
     <h1 class="registration__title">{{title}}</h1>
     <p class="registration__paragraph">{{paragraph}}</p>
-    <form class="registration__form">
-        <!--  TODO: fix -->
-        <app-input label="Imię"></app-input>
-        <app-input label="Email" type="'email'"></app-input>
-        <app-input label="Hasło" type="'password'"></app-input>
+    <form class="registration__form" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <input class="registration__form__input" formControlName="email" placeholder="Email" type="email" required>
+        <p class="registration__form__error" *ngIf="email?.hasError('required') && email?.touched">{{emailError}} </p>
+        <input class="registration__form__input" formControlName="password" placeholder="Hasło" type="password">
+        <p class="registration__form__error" *ngIf="password?.hasError('required') && password?.touched">
+            {{passwordError}} </p>
         <app-button class="registration__button" [label]="buttonLabel"></app-button>
     </form>
     <div class="registration__link-wrapper">
