@@ -4,7 +4,7 @@ import PARAGRAPHS from '../../labels/paragraphs.json';
 import BUTTONS from '../../labels/buttons.json';
 import { LINK_DESIGN_TYPE } from '../shared/components/base/link/link.component';
 
-const LOGIN_URL = '../login'
+const LOGIN_URL = '../login';
 
 @Component({
   selector: 'app-opening-page',
