@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import TITLES from '../../labels/titles.json';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  classicsLabel = TITLES.KawoweKlasyki;
+  newLabel = TITLES.Nowosci;
 
   constructor() { }
 

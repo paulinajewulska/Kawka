@@ -1,0 +1,36 @@
+@import 'variables';
+
+.home {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    &__new, &__classics {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__coffee-card {
+        margin: .5rem 0;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
+@media screen and (min-width: $tablet) {
+    .home {
+        &__new, &__classics {
+            flex-direction: row;
+        }
+
+        &__coffee-card {
+            margin:  0 .5rem;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+    }
+}
