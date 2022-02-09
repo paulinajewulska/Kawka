@@ -1,6 +1,7 @@
 <div class="link__wrapper">
-    <a *ngIf="isRouterLink; else hrefLink" [routerLink]="routerLinkPath" class="link"> {{label}} </a>
+    <a *ngIf="isRouterLink; else hrefLink" [routerLink]="routerLinkPath" [ngClass]="isButtonType ? 'button' : 'link'">
+        {{label}} </a>
     <ng-template #hrefLink>
-        <a [href]="hrefPath" target="_blank" class="link"> {{label}} </a>
+        <a [href]="hrefPath" target="_blank" [ngClass]="isButtonType ? 'button' : 'link'"> {{label}} </a>
     </ng-template>
 </div>
