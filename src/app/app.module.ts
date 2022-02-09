@@ -11,7 +11,9 @@ import { RegistrationComponent } from './registration/registration.component';
 import { OpeningPageComponent } from './opening-page/opening-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CoffeeCardComponent } from './coffee-card/coffee-card.component';
-import { firebaseConfig } from './firebaseConfig'; // includes firebaseConfig info
+import { firebaseConfig } from './firebaseConfig';
+import { NavComponent } from './nav/nav.component';
+import { MenuComponent } from './menu/menu.component'; // includes firebaseConfig info
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { firebaseConfig } from './firebaseConfig'; // includes firebaseConfig in
     RegistrationComponent,
     OpeningPageComponent,
     PageNotFoundComponent,
-    CoffeeCardComponent
+    CoffeeCardComponent,
+    NavComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
