@@ -6,11 +6,17 @@
             <div class="home__classics-wrapper">
                 <h1 class="home__title">{{classicsLabel}}</h1>
                 <div class="home__classics">
+                    <app-coffee-card *ngFor="let coffee of classicCoffees" class="home__coffee-card"
+                        [title]="coffee.name" [roaster]="coffee.roaster" [origin]="coffee.origin">
+                    </app-coffee-card>
                 </div>
             </div>
             <div class="home__new-wrapper">
                 <h1 class="home__title">{{newLabel}}</h1>
                 <div class="home__new">
+                    <app-coffee-card *ngFor="let coffee of newCoffees" class="home__coffee-card" [title]="coffee.name"
+                        [roaster]="coffee.roaster" [origin]="coffee.origin">
+                    </app-coffee-card>
                 </div>
             </div>
         </div>
