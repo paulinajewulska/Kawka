@@ -4,8 +4,8 @@
         <!--  TODO: fix -->
         <app-input label="Email" type="'email'"></app-input>
         <app-input label="Hasło" type="'password'"></app-input>
-        <app-button class="registration__button" [label]="buttonLabel"></app-button>
+        <app-button class="login__button" [label]="buttonLabel"></app-button>
     </form>
-    <p class="login__paragraph">{{linkParagraph}} <app-link [label]="loginLink"></app-link>
+    <p class="login__paragraph">{{linkParagraph}} <app-link [label]="loginLink" [routerLink]='registerUrl'></app-link>
     </p>
 </div>

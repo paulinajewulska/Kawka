@@ -3,6 +3,8 @@ import TITLES from '../../labels/titles.json';
 import PARAGRAPHS from '../../labels/paragraphs.json';
 import BUTTONS from '../../labels/buttons.json';
 
+const LOGIN_URL = '../login';
+
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
@@ -14,4 +16,5 @@ export class RegistrationComponent {
   linkParagraph = PARAGRAPHS.PosiadaszJuzKonto;
   buttonLabel = BUTTONS.Zarejestruj;
   loginLink = BUTTONS.Zaloguj;
+  loginUrl = LOGIN_URL;
 }
