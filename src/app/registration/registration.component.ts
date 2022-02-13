@@ -3,8 +3,8 @@ import TITLES from '../../labels/titles.json';
 import PARAGRAPHS from '../../labels/paragraphs.json';
 import BUTTONS from '../../labels/buttons.json';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from '../auth-service.service';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth-service.service';
 
 const LOGIN_URL = '../login';
 

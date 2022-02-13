@@ -31,18 +31,19 @@
 
     &__chips {
         display: flex;
+        flex-wrap: wrap;
         margin-top: auto;
     }
 
     &__chip {
-        margin-right: .25rem;
+        margin: 0 .15rem .15rem 0;
     }
 }
 
 @media screen and (min-width: $laptop) {
     .coffee-card {
-        width: 11rem;
-        min-height: 13rem;
+        width: 10rem;
+        min-height: 10rem;
         flex-direction: column;
 
         &__image-wrapper {

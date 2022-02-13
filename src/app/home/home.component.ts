@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
 import TITLES from '../../labels/titles.json';
-import { CoffeeService } from '../coffee.service';
+import { CoffeeService } from '../services/coffee.service';
 
 interface Coffee {
   Name?: string;
@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
   }
 
   getNewCoffees(): void {
-    this.coffeeService.getAll().snapshotChanges().pipe(
+    this.coffeeService.getNewCoffees().snapshotChanges().pipe(
       map(changes =>
         changes.map(c =>
           ({ id: c.payload.doc.id, ...c.payload.doc.data() })
@@ -39,7 +39,7 @@ export class HomeComponent implements OnInit {
   }
 
   getClassicCoffes(): void {
-    this.coffeeService.getAll().snapshotChanges().pipe(
+    this.coffeeService.getClassicCoffees().snapshotChanges().pipe(
       map(changes =>
         changes.map(c =>
           ({ id: c.payload.doc.id, ...c.payload.doc.data() })

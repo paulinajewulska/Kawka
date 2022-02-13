@@ -19,14 +19,14 @@ export class CoffeeService {
   }
 
   getAll(): AngularFirestoreCollection<Coffee> {
-    return this.db.collection(this.coffeesPath, x => x.limit(4));
+    return this.db.collection(this.coffeesPath, c => c.limit(4));
   }
 
-  // getNewCoffees(): AngularFirestoreCollection<Coffee> {
-  //   return this.db.collection(this.coffeesPath, x => x.orderBy('time').limit(2));
-  // }
+  getNewCoffees(): AngularFirestoreCollection<Coffee> {
+    return this.db.collection(this.coffeesPath, c => c.orderBy('added_at', 'desc').limit(4));
+  }
 
-  // getClassicCoffees(): AngularFirestoreCollection<Coffee> {
-  //   return this.db.collection(this.coffeesPath, x => x.orderBy('added_at').limit(4));
-  // }
+  getClassicCoffees(): AngularFirestoreCollection<Coffee> {
+    return this.db.collection(this.coffeesPath, c => c.orderBy('added_at', 'asc').limit(4));
+  }
 }
