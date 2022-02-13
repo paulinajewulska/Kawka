@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -10,6 +11,8 @@ export class NavComponent implements OnInit {
   search = { src: '../../assets/icons/nav/search.png', alt: 'Search' };
   isDesktop = false;
 
+  constructor(private readonly router: Router) { }
+
   ngOnInit(): void {
     this.getScreenSize();
   }
@@ -17,5 +20,13 @@ export class NavComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   getScreenSize() {
     this.isDesktop = window.innerWidth >= 780;
+  }
+
+  navigateToHomePage() {
+    this.router.navigate(['/home']);
+  }
+
+  navigateToSearchPage() {
+    this.router.navigate(['/search']);
   }
 }
