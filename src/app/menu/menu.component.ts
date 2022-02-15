@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -13,6 +14,8 @@ export class MenuComponent implements OnInit {
   isNavOpen = false;
   isDesktop = false;
 
+  constructor(private readonly router: Router) { }
+
   ngOnInit(): void {
     this.getScreenSize();
   }
@@ -24,5 +27,9 @@ export class MenuComponent implements OnInit {
 
   onToggleMenuMobile() {
     this.isNavOpen = !this.isNavOpen;
+  }
+
+  navigateToHomePage() {
+    this.router.navigate(['/home']);
   }
 }

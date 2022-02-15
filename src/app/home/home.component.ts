@@ -1,13 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { map } from 'rxjs/operators';
 import TITLES from '../../labels/titles.json';
 import { CoffeeService } from '../services/coffee.service';
-
-interface Coffee {
-  Name?: string;
-  Origin?: string;
-  Roaster?: string;
-}
 
 @Component({
   selector: 'app-home',
@@ -19,7 +14,7 @@ export class HomeComponent implements OnInit {
   newLabel = TITLES.Nowosci;
   classicCoffees: any;
   newCoffees: any;
-  constructor(private readonly coffeeService: CoffeeService) { }
+  constructor(private readonly coffeeService: CoffeeService, private readonly router: Router) { }
 
   ngOnInit(): void {
     this.getNewCoffees();
@@ -48,5 +43,9 @@ export class HomeComponent implements OnInit {
     ).subscribe(data => {
       this.classicCoffees = data;
     });
+  }
+
+  redirectToCoffeeCard(id: number) {
+    this.router.navigate(['/coffee-details', id]);
   }
 }

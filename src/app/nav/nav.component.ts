@@ -10,6 +10,7 @@ export class NavComponent implements OnInit {
   home = { src: '../../assets/icons/nav/home.png', alt: 'Home' };
   search = { src: '../../assets/icons/nav/search.png', alt: 'Search' };
   isDesktop = false;
+  selectedRoute: 'home';
 
   constructor(private readonly router: Router) { }
 
@@ -28,5 +29,9 @@ export class NavComponent implements OnInit {
 
   navigateToSearchPage() {
     this.router.navigate(['/search']);
+  }
+
+  get isSelectedRouteHome() {
+    return this.router.url.includes('home') ? true : false;
   }
 }

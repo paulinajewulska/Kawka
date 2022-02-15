@@ -25,6 +25,7 @@
     }
 
     &__title {
+        height: 60%;
         margin-top: .25rem;
         font-weight: bold;
     }
@@ -43,7 +44,7 @@
 @media screen and (min-width: $laptop) {
     .coffee-card {
         width: 10rem;
-        min-height: 10rem;
+        min-height: 12.5rem;
         flex-direction: column;
 
         &__image-wrapper {
@@ -51,10 +52,11 @@
         }
 
         &__image {
-            width: 50%;
+            width: 40%;
         }
 
         &__title {
+            height: 4rem;
             margin: .5rem 0 1.5rem;
         }
 
