@@ -1,0 +1,66 @@
+@import 'variables';
+
+.search {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    
+    &__form, &__results {
+        display: flex;
+        flex-direction: column;
+        padding: 0 1.5rem;
+    }
+
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__coffee-card {
+        margin: .5rem 0;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    height: calc(100vh - 70px);
+}
+
+@media screen and (min-width: $tablet) {
+    .search {
+
+        &__new, &__classics {
+            flex-direction: row;
+        }
+
+        &__coffee-card {
+            margin:  0 .5rem;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .wrapper {
+        flex-direction: row;
+    }
+}
+
+.search__classics-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+mat-form-field {
+    width: 40%;
+    margin: .25rem;
+}

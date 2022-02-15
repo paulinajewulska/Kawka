@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 
-interface Coffee {
-  Name?: string;
-  Origin?: string;
-  Roaster?: string;
+export interface Coffee {
+  name: string;
+  origin: string;
+  roaster: string;
+  added_at?: string;
+  treatment?: string;
+  degree?: string;
 }
 
 @Injectable({
@@ -19,7 +22,7 @@ export class CoffeeService {
   }
 
   getAll(): AngularFirestoreCollection<Coffee> {
-    return this.db.collection(this.coffeesPath, c => c.limit(4));
+    return this.db.collection(this.coffeesPath);
   }
 
   getNewCoffees(): AngularFirestoreCollection<Coffee> {

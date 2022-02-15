@@ -24,7 +24,8 @@
       "dom"
     ],
     "resolveJsonModule": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "useUnknownInCatchVariables": false
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

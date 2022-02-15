@@ -5,7 +5,10 @@ body {
     margin: 0;
 }
 
-h1, h2, button {
+h1, h2, h3, button {
     font-family: 'Playfair Display', serif;
     font-weight: normal;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

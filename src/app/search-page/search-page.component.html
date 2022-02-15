@@ -1,0 +1,46 @@
+<div class="search">
+    <app-menu></app-menu>
+    <div class="wrapper">
+        <app-nav></app-nav>
+        <div class="content-wrapper">
+            <div class="search__form">
+                <form class="registration__form" [formGroup]="form" (ngSubmit)="onSubmit()">
+                    <input class="registration__form__input" formControlName="search" placeholder="Wyszukaj" type="text"
+                        required>
+                    <app-button class="registration__button" label="Wyszukaj"></app-button>
+                    <mat-form-field>
+                        <mat-label>Pochodzenie</mat-label>
+                        <mat-select formControlName="origin" multiple>
+                            <mat-option *ngFor="let origin of origins" [value]="origin">{{origin}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Palarnia</mat-label>
+                        <mat-select formControlName="roaster" multiple>
+                            <mat-option *ngFor="let roaster of roasters" [value]="roaster">{{roaster}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Obróbka</mat-label>
+                        <mat-select formControlName="treatmen" multiple>
+                            <mat-option *ngFor="let treatmen of treatmens" [value]="treatmen">{{treatmen}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Stopień palenia</mat-label>
+                        <mat-select formControlName="degree" multiple>
+                            <mat-option *ngFor="let degree of degrees" [value]="degree">{{degree}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </form>
+            </div>
+
+            <div class="search__results">
+                <h1 class="search__title">{{title}}</h1>
+                <app-coffee-card *ngFor="let coffee of coffees" class="search__coffee-card" [title]="coffee.name"
+                    [roaster]="coffee.roaster" [origin]="coffee.origin" (click)="redirectToCoffeeCard(coffee.id)">
+                </app-coffee-card>
+            </div>
+        </div>
+    </div>
+</div>
