@@ -1,7 +1,12 @@
 <div class="opening-page">
-    <h1 class="opening-page__title">{{title}}</h1>
-    <p class="opening-page__paragraph">{{paragraph}}</p>
-    <app-link class="opening-page__button" [label]="buttonLabel" [type]="LINK_DESIGN_TYPE.BUTTON"
-        [routerLink]='loginUrl'>
-    </app-link>
+    <div class="opening-page__left">
+        <h1 class="opening-page__title">{{title}}</h1>
+        <p class="opening-page__paragraph">{{paragraph}}</p>
+        <app-link class="opening-page__button" [label]="buttonLabel" [type]="LINK_DESIGN_TYPE.BUTTON"
+            [routerLink]='loginUrl'>
+        </app-link>
+    </div>
+    <div class="opening-page__right">
+        <img [src]="imgSrc" [alt]="imgLabel" class="opening-page__image" />
+    </div>
 </div>

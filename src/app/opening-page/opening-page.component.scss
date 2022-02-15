@@ -7,6 +7,12 @@
     height: 100vh;
     padding: 0 1.5rem;
 
+    &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     &__title,  &__paragraph, &__button { 
         margin: 1rem 0;
     }
@@ -14,14 +20,23 @@
     &__button {
         margin-bottom: 5rem;  // to lift component up 🎈
     }
+
+    &__image {
+        display: none;
+    }
 }
 
 @media screen and (min-width: $tablet) {
     .opening-page {
+        flex-direction: row;
+        align-items: center;
         padding: 0 2rem;
         
-        &__title,  &__paragraph { 
-            width: 50%;
+        &__image {
+            display: block;
+            width: 60%;
+            margin-left: auto;
+            margin-right: 4rem;
         }
     }
 }

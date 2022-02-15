@@ -17,4 +17,6 @@ export class OpeningPageComponent {
   buttonLabel = BUTTONS.Zaczynajmy;
   LINK_DESIGN_TYPE = LINK_DESIGN_TYPE;
   loginUrl = LOGIN_URL;
+  imgSrc = '../../assets/images/CupofClouds.png';
+  imgLabel = 'Coffee Cub Ilustration';
 }
