@@ -1,13 +1,19 @@
 <div class="login">
-    <h1 class="login__title">{{title}}</h1>
-    <form class="login__form" [formGroup]="form" (ngSubmit)="onSubmit()">
-        <input class="login__form__input" formControlName="email" placeholder="Email" type="email" required>
-        <p class="login__form__error" *ngIf="email?.hasError('required') && email?.touched">{{emailError}} </p>
-        <input class="login__form__input" formControlName="password" placeholder="Hasło" type="password">
-        <p class="login__form__error" *ngIf="password?.hasError('required') && password?.touched"> {{passwordError}}
+    <div class="login__left">
+        <img [src]="imgSrc" [alt]="imgLabel" class="login__image" />
+    </div>
+    <div class="login__right">
+        <h1 class="login__title">{{title}}</h1>
+        <form class="login__form" [formGroup]="form" (ngSubmit)="onSubmit()">
+            <input class="login__form__input" formControlName="email" placeholder="Email" type="email" required>
+            <p class="login__form__error" *ngIf="email?.hasError('required') && email?.touched">{{emailError}} </p>
+            <input class="login__form__input" formControlName="password" placeholder="Hasło" type="password">
+            <p class="login__form__error" *ngIf="password?.hasError('required') && password?.touched"> {{passwordError}}
+            </p>
+            <app-button class="login__button" [label]="buttonLabel"></app-button>
+        </form>
+        <p class="login__paragraph">{{linkParagraph}} <app-link [label]="loginLink" [routerLink]='registerUrl'>
+            </app-link>
         </p>
-        <app-button class="login__button" [label]="buttonLabel"></app-button>
-    </form>
-    <p class="login__paragraph">{{linkParagraph}} <app-link [label]="loginLink" [routerLink]='registerUrl'></app-link>
-    </p>
+    </div>
 </div>

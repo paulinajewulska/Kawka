@@ -23,6 +23,8 @@ export class LoginComponent {
   passwordError = PARAGRAPHS.HasloJestWymagane;
   registerUrl = REGISTER_URL;
   form: FormGroup;
+  imgSrc = '../../assets/images/Peace.png';
+  imgLabel = 'Peace Ilustration';
 
   constructor(private fb: FormBuilder, private readonly authService: AuthService, private readonly router: Router) { }
 

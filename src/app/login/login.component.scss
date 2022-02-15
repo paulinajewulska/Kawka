@@ -7,6 +7,12 @@
     height: 100vh;  
     padding: 0 1.5rem;
 
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     &__button {
         display: block;
         margin-top: 2rem;
@@ -14,6 +20,7 @@
 
     &__paragraph {
         margin-top: 2rem;
+        cursor: pointer;
     }
 
     &__link {
@@ -21,7 +28,6 @@
         align-items: center;
     }
 
-    
     &__form {
         &__input {
             width: 100%;
@@ -43,14 +49,25 @@
             color: $red;
         }
     }
+
+    &__image {
+        display: none;
+    }
 }
 
 @media screen and (min-width: $tablet) {
     .login {
+        flex-direction: row;
+        align-items: center;
         padding: 0 2rem;
 
-        &__form { 
-            width: 50%;
+        &__left {
+            width: 30vw;
+        }
+
+        &__image {
+            display: block;
+            width: 90%;
         }
     }
 }
@@ -58,7 +75,7 @@
 @media screen and (min-width: $laptop) {
     .login {
         &__form { 
-            width: 25%;
+            width: 30vw;
         }
     }
 }

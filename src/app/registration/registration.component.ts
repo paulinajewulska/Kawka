@@ -23,6 +23,8 @@ export class RegistrationComponent {
   emailError = PARAGRAPHS.EmailJestWymagany;
   passwordError = PARAGRAPHS.HasloJestWymagane;
   form: FormGroup;
+  imgSrc = '../../assets/images/Peace.png';
+  imgLabel = 'Peace Ilustration';
 
   constructor(private fb: FormBuilder, private readonly authService: AuthService, private readonly router: Router) { }
 
