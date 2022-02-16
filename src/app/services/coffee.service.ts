@@ -9,6 +9,7 @@ export interface Coffee {
   treatment?: string;
   adacity?: string;
   id?: string;
+  brewingMetods?: Array<any>;
 }
 
 export const coffeeDetailLabels = [
@@ -18,6 +19,13 @@ export const coffeeDetailLabels = [
   { treatment: 'Obróbka:' },
   { acidity: 'Kwasowość:' },
   { degree: 'Stopień palenia:' }];
+
+export const brewingMethodsLabels = [
+  { method: 'Metoda:', sublabel: '' },
+  { waterTemp: 'Temperatura wody:', sublabel: 'C' },
+  { waterAmount: 'Ilość wody:', sublabel: 'ml' },
+  { coffeeAmount: 'Ilość kawy:', sublabel: 'g' },
+  { time: 'Czas parzenia:', sublabel: '' }];
 
 export const brewingMethodsIcons = [
   { src: '../../assets/icons/coffee-nav/aeropress.png', alt: 'Aeropress icon', brewingType: 'aeropress' },

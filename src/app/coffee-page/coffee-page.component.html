@@ -1,0 +1,30 @@
+<div class="coffee">
+    <app-menu></app-menu>
+    <div class="wrapper">
+        <app-nav></app-nav>
+        <div class="content-wrapper">
+            <div class="coffee__details-wrapper">
+                <div class="coffee__details__image-wrapper">
+                    <img [src]="imgSrc" [alt]="imgLabel" class="coffee__details__image" />
+                </div>
+                <div class="coffee__details">
+                    <h3 class="coffee__details__title">{{coffee?.name}}</h3>
+                    <p *ngFor="let detail of details" class="coffee__details__info"><span
+                            class="coffee__details__info--bold">{{detail.label}}</span> {{detail.value}}
+                    </p>
+                </div>
+            </div>
+            <div class="coffee__results">
+                <h3 class="coffee__results__title">{{resultsTitle}}
+                </h3>
+                <div class="coffee__results-card__wrapper" *ngIf="showBrewingCards() else noBrewingMethod">
+                    <app-brewing-method-card [method]="brewingMethod">
+                    </app-brewing-method-card>
+                </div>
+                <ng-template #noBrewingMethod>
+                    <p class="coffee__results__title">Brak :( </p>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>

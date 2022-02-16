@@ -1,0 +1,114 @@
+@import 'variables';
+
+.coffee {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        padding-left: 1rem;
+
+        &-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid $black;
+        }
+        
+        &__image {
+            width: 100%;
+            height: fit-content;
+                
+            &-wrapper {
+                display: flex;
+                justify-content: center;
+                background-color: $pure-white;
+                width: 25%;
+                height: fit-content;
+                border: 1px solid $black;
+                border-radius: 10px;
+                padding: 0.5rem 0;
+            }
+        }
+
+        &__title {
+            max-width: 50vw;
+            margin: 0 0 0.5rem;
+        }
+
+        &__info {
+            font-size: 0.75rem;
+            max-width: 50vw;
+            margin: 0 0 0.25rem;
+
+            &--bold {
+                font-weight: bold;
+            }
+        }
+    }
+
+    &__brewing-methods {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid $black;
+
+        &__title {
+            margin: 0 0 0.75rem;
+        }
+
+        &__icon {
+            width: 32px;
+            padding: .25rem .5rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__results {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 1.5rem;
+
+        &__title {
+            margin-top: 0;
+        }
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    height: calc(100vh - 70px);
+}
+
+@media screen and (min-width: $tablet) {
+    .coffee {
+
+        &__details {
+            width: 100%;
+        }
+        
+        &__brewing-methods {
+            flex-direction: row;
+            align-items: center;
+
+            &__icons {
+                margin-left: auto;
+            }
+        }
+    }
+
+    .wrapper {
+        flex-direction: row;
+        width: 100%;
+    }
+}

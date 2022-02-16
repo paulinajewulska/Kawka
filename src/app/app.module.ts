@@ -13,7 +13,12 @@ import { CoffeeCardComponent } from './coffee-card/coffee-card.component';
 import { firebaseConfig } from './firebaseConfig';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NavComponent } from './nav/nav.component';
-import { MenuComponent } from './menu/menu.component'; // includes firebaseConfig info
+import { MenuComponent } from './menu/menu.component';
+import { SearchPageComponent } from './search-page/search-page.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // includes firebaseConfig info
+import { MatSelectModule } from '@angular/material/select';
+import { CoffeePageComponent } from './coffee-page/coffee-page.component';
+import { BrewingMethodCardComponent } from './brewing-method-card/brewing-method-card.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +30,10 @@ import { MenuComponent } from './menu/menu.component'; // includes firebaseConfi
     PageNotFoundComponent,
     CoffeeCardComponent,
     NavComponent,
-    MenuComponent
+    MenuComponent,
+    SearchPageComponent,
+    CoffeePageComponent,
+    BrewingMethodCardComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +42,8 @@ import { MenuComponent } from './menu/menu.component'; // includes firebaseConfi
     AppRoutingModule,
     SharedModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

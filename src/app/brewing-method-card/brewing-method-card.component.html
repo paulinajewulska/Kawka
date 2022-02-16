@@ -1,0 +1,5 @@
+<div class="brewing-method-card">
+    <p *ngFor="let value of method" class="brewing-method-card__value">
+        <span class="brewing-method-card__value--bold">{{value.label}}</span> {{value.value}} {{value.subLabel}}
+    </p>
+</div>
