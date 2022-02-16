@@ -11,5 +11,9 @@
         &:hover {
             cursor: pointer;
         }
+
+        &:last-child {
+            margin-left: auto;
+        }
     }
 }

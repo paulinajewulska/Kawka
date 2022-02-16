@@ -1,5 +1,6 @@
 <div class="menu">
     <img [src]="logo.src" [alt]="logo.alt" class="menu__icon" (click)="navigateToHomePage()" />
+    <img *ngIf="isDesktop; else MobileNav" [src]="user.src" [alt]="user.alt" class="menu__icon" />
     <ng-template #MobileNav>
         <img *ngIf="isNavOpen; else BurgerIcon" [src]="close.src" [alt]="close.alt" class="menu__icon"
             (click)="onToggleMenuMobile()" />
