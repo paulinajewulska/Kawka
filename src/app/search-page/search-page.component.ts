@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { map } from 'rxjs/operators';
 import TITLES from '../../labels/titles.json';
-import { CoffeeService } from '../services/coffee.service';
+import { CoffeeService, Coffee } from '../services/coffee.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -15,14 +14,14 @@ export class SearchPageComponent implements OnInit {
   title = TITLES.OtoCoUdaloNamSieZnalezc;
   origins: Array<string | undefined> = [];
   roasters: Array<string | undefined> = [];
-  treatmens: Array<string | undefined> = [];
-  degrees: Array<string | undefined> = [];
+  treatments: Array<string | undefined> = [];
+  adacities: Array<string | undefined> = [];
   form: FormGroup;
-  coffees: any = [];
+  coffees: Array<Coffee> = [];
+  allCoffees: any = [];
 
-  constructor(private fb: FormBuilder,
+  constructor(private readonly fb: FormBuilder,
     private readonly coffeeService: CoffeeService,
-    private db: AngularFirestore,
     private readonly router: Router) { }
 
   ngOnInit(): void {
@@ -31,8 +30,8 @@ export class SearchPageComponent implements OnInit {
       search: [''],
       origin: new FormControl(''),
       roaster: new FormControl(''),
-      treatmen: new FormControl(''),
-      degree: new FormControl('')
+      treatment: new FormControl(''),
+      adacity: new FormControl('')
     });
   }
 
@@ -44,18 +43,26 @@ export class SearchPageComponent implements OnInit {
         )
       )
     ).subscribe(data => {
+      this.allCoffees = data;
       this.coffees = data;
-      this.origins = [... new Set(data.map(c => c.origin))];
-      this.roasters = [... new Set(data.map(c => c.roaster))];
-      this.treatmens = [... new Set(data.map(c => c.treatment))];
-      this.degrees = [... new Set(data.map(c => c.degree))];
+      this.origins = [... new Set(data.map(c => c.origin).filter(Boolean))];
+      this.roasters = [... new Set(data.map(c => c.roaster).filter(Boolean))];
+      this.treatments = [... new Set(data.map(c => c.treatment).filter(Boolean))];
+      this.adacities = [... new Set(data.map(c => c.adacity).filter(Boolean))];
     });
   }
 
-  redirectToCoffeeCard(id: number) {
+  redirectToCoffeeCard(id: string | undefined) {
     this.router.navigate(['/coffee-details', id]);
   }
 
-  async onSubmit() {
+  onSubmit() {
+    const formValue = this.form.value;
+    this.coffees = this.allCoffees;
+    this.coffees = formValue.adacity.length ? this.coffees.filter((c: Coffee) => formValue.adacity?.includes(c.adacity)) : this.coffees;
+    this.coffees = formValue.origin.length ? this.coffees.filter((c: Coffee) => formValue.origin?.includes(c.origin)) : this.coffees;
+    this.coffees = formValue.roaster.length ? this.coffees.filter((c: Coffee) => formValue.roaster?.includes(c.roaster)) : this.coffees;
+    this.coffees = formValue.treatment.length ? this.coffees.filter((c: Coffee) => formValue.treatment?.includes(c.treatment)) : this.coffees;
+    this.coffees = formValue.search.length ? this.coffees.filter((c: Coffee) => c.name.includes(formValue.search)) : this.coffees;
   }
 }
