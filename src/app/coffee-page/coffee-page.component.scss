@@ -13,7 +13,6 @@
 
         &-wrapper {
             display: flex;
-            flex-wrap: wrap;
             padding: 1rem 1.5rem;
             border-bottom: 1px solid $black;
         }
@@ -87,14 +86,34 @@
 }
 
 .content-wrapper {
+    width: 100%;
     height: calc(100vh - 70px);
 }
 
 @media screen and (min-width: $tablet) {
     .coffee {
-
         &__details {
             width: 100%;
+            margin-left: 3rem;
+
+            &-wrapper {
+                padding: 2rem 2.5rem;
+            }
+
+            &__title {
+                font-size: 2rem;
+            }
+
+            &__info {
+                font-size: 1rem;
+                margin: 0.25rem 0;
+            }
+        }
+
+        &__results {
+            &__title {
+                font-size: 2rem;
+            }
         }
         
         &__brewing-methods {
