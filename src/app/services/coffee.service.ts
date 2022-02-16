@@ -27,14 +27,6 @@ export const brewingMethodsLabels = [
   { coffeeAmount: 'Ilość kawy:', sublabel: 'g' },
   { time: 'Czas parzenia:', sublabel: '' }];
 
-export const brewingMethodsIcons = [
-  { src: '../../assets/icons/coffee-nav/aeropress.png', alt: 'Aeropress icon', brewingType: 'aeropress' },
-  { src: '../../assets/icons/coffee-nav/chemex.png', alt: 'Chemex icon', brewingType: 'chemex' },
-  { src: '../../assets/icons/coffee-nav/drip.png', alt: 'Drip icon', brewingType: 'drip' },
-  { src: '../../assets/icons/coffee-nav/french-press.png', alt: 'French press icon', brewingType: 'frenchPress' },
-  { src: '../../assets/icons/coffee-nav/moka-pot.png', alt: 'Moka pot icon', brewingType: 'mokaPot' },
-  { src: '../../assets/icons/coffee-nav/portafilter.png', alt: 'Portafilter icon', brewingType: 'portafilter' }];
-
 @Injectable({
   providedIn: 'root'
 })
