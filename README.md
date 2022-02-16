@@ -3,8 +3,6 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.2.
 
-This project is for purpose of a class "Techniki Programowania Frontendowego".
-
 The application is for purpose of a class "Techniki Programowania Frontendowego" and was created for all coffee fans, who struggle in preparing coffee and finding hidden flavors. Sound interesting? Check [our website](https://kawka-d542f.web.app/start)! ☕
 
 ## Website
